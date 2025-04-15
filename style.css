@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "norsebold";
+  src: url("assets/webfontkit/norse-bold-webfont.woff2") format("woff2"),
+    url("assets/webfontkit/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --create-acc-btn: #594d48;
+  --light-border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ********* - Reset - ***********' */
+
+p {
+  font-family: "norsebold";
+  background-color: var(--create-acc-btn);
+}
+
+#image {
+  max-width: 50%;
+  height: auto;
+}
