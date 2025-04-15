@@ -9,6 +9,8 @@
 :root {
   --create-acc-btn: #594d48;
   --light-border: #e5e7eb;
+  --white-text: white;
+  --black-accent: black;
 }
 
 * {
@@ -16,42 +18,68 @@
   padding: 0;
 }
 
-/* ********* - Reset - *********** */
+/* ********* - Reset - Font - Color definitions - *********** */
 
 p {
-  font-family: "norsebold";
+  font-family: "Courier New", Courier, monospace;
 }
 
 #vertical-container {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 /* Left side CSS */
 #image-container {
   position: relative;
   width: 33%;
+  height: 100%;
 }
 
 #image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: 12%;
 }
-
-#odin-banner-text {
+#odin-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 0px;
-  background-color: #e5e7eb;
-  width: 33%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 18%;
+  width: 100%;
+  height: 20%;
   z-index: 1;
 }
 
-#credit-banner-text {
+#odin-banner-text {
+  font-size: 4rem;
+  font-family: "norsebold";
+  color: var(--white-text);
+}
+
+#odin-logo {
+  /* How do i dynamically size this? */
+  width: 90px;
+  height: auto; /* keeps aspect ratio */
+}
+
+#credit-banner {
+  display: flex;
+  justify-content: center;
+  color: var(--white-text);
   position: absolute;
   bottom: 0px;
-  background-color: #e5e7eb;
-  width: 33%;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+#credit-banner-text > a {
+  color: var(--white-text);
 }
 
 /* Right side CSS */
