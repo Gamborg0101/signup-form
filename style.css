@@ -11,6 +11,7 @@
   --create-acc-btn: #594d48;
   --light-border: #e5e7eb;
   --white-text: white;
+  --white-background: white;
   --black-accent: black;
 }
 
@@ -24,6 +25,14 @@
 p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input {
+  border: 1px solid rgba(45, 40, 40, 0.458);
+  border-radius: 5px;
+  height: 20px;
+  padding: 2px;
+  width: 200px;
 }
 
 #vertical-container {
@@ -89,4 +98,45 @@ p {
 #form-container {
   background-color: var(--grey-background);
   width: 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#top-row-text-area {
+  font-size: 1.6rem;
+  margin-left: 50px;
+}
+
+#form-area {
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 2px 1px rgb(136, 136, 153);
+  background-color: var(--white-background);
+  height: 40%;
+  font-size: 0.8rem;
+}
+#upper-text {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+}
+
+#left-right-main-container {
+  display: flex;
+  padding-right: 50px;
+  column-gap: 30%;
+}
+#left-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 40px;
+  row-gap: 7px;
+}
+
+#right-form-section {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  row-gap: 7px;
 }
