@@ -7,6 +7,7 @@
 }
 
 :root {
+  --grey-background: rgba(249, 250, 251, 255);
   --create-acc-btn: #594d48;
   --light-border: #e5e7eb;
   --white-text: white;
@@ -21,7 +22,8 @@
 /* ********* - Reset - Font - Color definitions - *********** */
 
 p {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #vertical-container {
@@ -85,6 +87,6 @@ p {
 /* Right side CSS */
 
 #form-container {
-  background-color: aqua;
+  background-color: var(--grey-background);
   width: 67%;
 }
