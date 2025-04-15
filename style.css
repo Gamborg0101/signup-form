@@ -16,14 +16,47 @@
   padding: 0;
 }
 
-/* ********* - Reset - ***********' */
+/* ********* - Reset - *********** */
 
 p {
   font-family: "norsebold";
-  background-color: var(--create-acc-btn);
+}
+
+#vertical-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left side CSS */
+#image-container {
+  position: relative;
+  width: 33%;
 }
 
 #image {
-  max-width: 50%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+#odin-banner-text {
+  position: absolute;
+  top: 0px;
+  background-color: #e5e7eb;
+  width: 33%;
+  z-index: 1;
+}
+
+#credit-banner-text {
+  position: absolute;
+  bottom: 0px;
+  background-color: #e5e7eb;
+  width: 33%;
+}
+
+/* Right side CSS */
+
+#form-container {
+  background-color: aqua;
+  width: 67%;
 }
