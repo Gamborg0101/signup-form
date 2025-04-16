@@ -8,10 +8,12 @@
 
 :root {
   --grey-background: rgba(249, 250, 251, 255);
-  --create-acc-btn: #594d48;
+  --acc-btn: #596d48;
   --light-border: #e5e7eb;
-  --white-text: white;
+  --white-text: #e8e8e8;
   --white-background: white;
+  --gray-text: #585858;
+  --black-text: black;
   --black-accent: black;
 }
 
@@ -23,8 +25,10 @@
 /* ********* - Reset - Font - Color definitions - *********** */
 
 p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /*font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;*/
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 input {
@@ -105,19 +109,23 @@ input {
 
 #top-row-text-area {
   font-size: 1.6rem;
-  margin-left: 50px;
+  margin-left: 40px;
+  font-weight: 700;
 }
 
 #form-area {
   display: flex;
   align-items: center;
-  box-shadow: 5px 5px 2px 1px rgb(136, 136, 153);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
   background-color: var(--white-background);
   height: 40%;
   font-size: 0.8rem;
 }
 #upper-text {
-  font-size: 1.6rem;
+  color: var(--black-text);
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+  font-weight: 600;
   padding-bottom: 20px;
 }
 
@@ -131,12 +139,45 @@ input {
   flex-direction: column;
   justify-content: end;
   padding-left: 40px;
-  row-gap: 7px;
+  font-weight: 600;
+  font-size: 0.65rem;
+  color: var(--gray-text);
 }
 
 #right-form-section {
   display: flex;
   justify-content: end;
   flex-direction: column;
-  row-gap: 7px;
+  font-weight: 600;
+  font-size: 0.65rem;
+  color: var(--gray-text);
+}
+
+#submit-button {
+  width: 180px;
+  height: 42px;
+  background-color: var(--acc-btn);
+  margin-left: 42px;
+  border-radius: 5px;
+  color: var(--white-text);
+  font-weight: bold;
+  border: 1px solid #596d48;
+}
+
+#left-form-section input,
+#right-form-section input {
+  margin-bottom: 12px;
+}
+
+#know-accent-italic {
+  font-style: italic;
+}
+#have-account-container {
+  margin-left: 42px;
+  text-decoration: none;
+}
+#have-account-container > p > a {
+  text-decoration: none;
+  color: var(--acc-btn);
+  font-weight: 600;
 }
