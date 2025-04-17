@@ -15,6 +15,10 @@
   --gray-text: #585858;
   --black-text: black;
   --black-accent: black;
+  --gray-input-border: #d3d3d3;
+  --input-error: red;
+  --input-accept: green;
+  --input-focus: blue;
 }
 
 * {
@@ -25,9 +29,6 @@
 /* ********* - Reset - Font - Color definitions - *********** */
 
 p {
-  /*font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;*/
-
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -36,11 +37,19 @@ body {
 }
 
 input {
-  border: 1px solid rgba(45, 40, 40, 0.458);
+  border: 1px solid var(--gray-input-border);
   border-radius: 5px;
   height: 20px;
-  padding: 2px;
+  padding: 4px;
   width: 200px;
+}
+
+input:focus {
+  border: 1px solid var(--input-focus);
+}
+
+input:invalid {
+  border: 1px solid var(--input-error);
 }
 
 #vertical-container {
@@ -101,8 +110,6 @@ input {
   color: var(--white-text);
 }
 
-/* Right side CSS */
-
 #form-container {
   width: 67%;
   display: flex;
@@ -112,6 +119,8 @@ input {
 }
 
 #top-row-text-area {
+  width: 100%;
+  max-width: 800px;
   font-size: 1.6rem;
   margin-left: 40px;
   font-weight: 700;
@@ -122,9 +131,12 @@ input {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
   background-color: var(--white-background);
-  height: 30%;
+  min-height: 32%;
+  height: auto;
   font-size: 0.8rem;
+  overflow: auto;
 }
+
 #upper-text {
   color: var(--black-text);
   font-size: 1.2rem;
@@ -133,44 +145,30 @@ input {
   padding-bottom: 20px;
 }
 
-#left-right-main-container {
-  display: flex;
-  padding-right: 50px;
-  column-gap: 30%;
-}
-#left-form-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+#form-section {
   padding-left: 40px;
   font-weight: 600;
   font-size: 0.65rem;
   color: var(--gray-text);
 }
-
-#right-form-section {
+.input-section {
   display: flex;
-  justify-content: end;
-  flex-direction: column;
-  font-weight: 600;
-  font-size: 0.65rem;
-  color: var(--gray-text);
+  align-items: center;
+  justify-content: start;
+  align-content: center;
 }
 
 #submit-button {
-  width: 180px;
-  height: 42px;
+  max-width: 180px;
+  min-height: 42px;
+  width: 100%;
   background-color: var(--acc-btn);
-  margin-left: 42px;
+  margin-left: 45px;
   border-radius: 5px;
   color: var(--white-text);
   font-weight: bold;
   border: 1px solid #596d48;
-}
-
-#left-form-section input,
-#right-form-section input {
-  margin-bottom: 12px;
+  overflow: hidden;
 }
 
 #know-accent-italic {
@@ -179,9 +177,21 @@ input {
 #have-account-container {
   margin-left: 42px;
   text-decoration: none;
+  overflow: hidden;
 }
 #have-account-container > p > a {
   text-decoration: none;
   color: var(--acc-btn);
   font-weight: 600;
+}
+
+.form-inputs-labels {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  gap: 40px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
 }

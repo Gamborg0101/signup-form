@@ -36,51 +36,66 @@
             This is not a real online service! You know you need something like
             this in your life to help you realize your deepest dreams.
           </p>
-          <br>
+          <br />
           <p>You <span id="know-accent-italic">know</span> you want to.</p>
         </div>
         <div id="form-area">
-          <form action="#" id="submit-form">
-            <div id="left-right-main-container">
-              <div id="left-form-section">
-                <p id="upper-text">Let's do this!</p>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name" name="firstName" />
-                <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name" name="lastName" />
+          <form action="#" method="post" id="submit-form">
+            <div id="form-section">
+              <p id="upper-text">Let's do this!</p>
 
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" />
-
+              <div class="form-inputs-labels">
+                <div class="field">
+                  <label for="first-name">FIRST NAME</label>
+                  <input type="text" id="first-name" name="firstName" />
+                </div>
+                <div class="field">
+                  <label for="last-name">LAST NAME</label>
+                  <input type="text" id="last-name" name="lastName" />
+                </div>
               </div>
-              <div id="right-form-section">
-                
-                <div></div>
-                <label for="phone-number">PHONE NUMBER</label>
-                <input type="text" id="phone-number" name="phoneNumber" />
 
-                <label for="password">PASSWORD</label>
-                <input type="password" id="password" name="password" />
+              <div class="form-inputs-labels">
+                <div class="field">
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email" name="email" />
+                </div>
+                <div class="field">
+                  <label for="phone-number">PHONE NUMBER</label>
+                  <input
+                    type="tel"
+                    id="phone-number"
+                    name="phoneNumber"
+                    minlength="8"
+                  />
+                </div>
+              </div>
 
-                <label for="passwordConfirm">CONFIRM PASSWORD</label>
-                <input
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                />
+              <div class="form-inputs-labels">
+                <div class="field">
+                  <label for="password">PASSWORD</label>
+                  <input type="password" id="password" name="password" />
+                </div>
+                <div class="field">
+                  <label for="passwordConfirm">CONFIRM PASSWORD</label>
+                  <input
+                    type="password"
+                    id="passwordConfirm"
+                    name="passwordConfirm"
+                  />
+                </div>
               </div>
             </div>
-
-          </div>
-          <button type="submit" id="submit-button">Create account</button>
-        </form>
-        <div id="have-account-container">
-          <p>Already have an account?  <a href="">Log in</a></p>
-         
+          </form>
+          <script src="index.js"></script>
         </div>
-        <div id="bottom-area"></div>
+        <button type="submit" id="submit-button" form="submit-form">
+          Create account
+        </button>
+        <div id="have-account-container">
+          <p>Already have an account? <a href="">Log in</a></p>
+        </div>
       </div>
     </div>
   </body>
-  <script src="index.js"></script>
 </html>
